@@ -1,0 +1,1719 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+<title>RUN FOR YOUR LIFE 2026 - Pemeriksaan Kesehatan</title>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+rel="stylesheet">
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+-webkit-tap-highlight-color:transparent;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:
+linear-gradient(
+135deg,
+#020617 0%,
+#071226 35%,
+#0b1f3d 70%,
+#102f5e 100%
+);
+min-height:100vh;
+color:white;
+padding:18px;
+overflow-x:hidden;
+}
+
+body::before{
+content:"";
+position:fixed;
+inset:0;
+background:
+radial-gradient(circle at top right,
+rgba(0,195,255,.15),
+transparent 30%),
+radial-gradient(circle at bottom left,
+rgba(255,60,120,.12),
+transparent 35%);
+pointer-events:none;
+z-index:0;
+}
+
+.container{
+position:relative;
+z-index:2;
+max-width:760px;
+margin:auto;
+}
+
+
+/* =========================================
+HERO
+========================================= */
+
+.hero{
+background:
+linear-gradient(
+135deg,
+rgba(255,255,255,.12),
+rgba(255,255,255,.04)
+);
+border:1px solid rgba(255,255,255,.12);
+backdrop-filter:blur(18px);
+border-radius:32px;
+padding:32px;
+padding-left:190px;
+margin-bottom:24px;
+box-shadow:
+0 10px 40px rgba(0,0,0,.35);
+overflow:hidden;
+position:relative;
+min-height:220px;
+display:flex;
+align-items:center;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+width:260px;
+height:260px;
+background:
+radial-gradient(circle,
+rgba(0,195,255,.18),
+transparent 70%);
+right:-70px;
+top:-70px;
+}
+
+.logo-group{
+position:absolute;
+top:30px;
+left:30px;
+display:flex;
+gap:0px;
+z-index:5;
+}
+
+.logo{
+width:74px;
+height:74px;
+border-radius:18px;
+object-fit:contain;
+background:none;
+padding:6px;
+box-shadow:
+none;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+width:100%;
+}
+
+.hero h1{
+font-size:42px;
+font-weight:900;
+line-height:1.1;
+margin-bottom:14px;
+}
+
+.hero p{
+font-size:16px;
+opacity:.88;
+line-height:1.8;
+}
+
+.badge{
+display:inline-flex;
+align-items:center;
+gap:8px;
+padding:12px 20px;
+background:
+linear-gradient(
+135deg,
+#00c3ff,
+#0066ff
+);
+border-radius:999px;
+font-size:14px;
+font-weight:700;
+margin-top:24px;
+box-shadow:
+0 8px 20px rgba(0,140,255,.35);
+}
+
+
+/* =========================================
+CARD
+========================================= */
+
+.card{
+background:
+linear-gradient(
+135deg,
+rgba(255,255,255,.12),
+rgba(255,255,255,.05)
+);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,.1);
+border-radius:30px;
+padding:24px;
+box-shadow:
+0 10px 40px rgba(0,0,0,.25);
+margin-bottom:22px;
+}
+
+.section-title{
+display:flex;
+align-items:center;
+gap:12px;
+font-size:20px;
+font-weight:800;
+margin-bottom:22px;
+}
+
+.section-title i{
+width:42px;
+height:42px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:14px;
+background:
+linear-gradient(
+135deg,
+#00c3ff,
+#0066ff
+);
+box-shadow:
+0 8px 20px rgba(0,140,255,.3);
+}
+
+
+/* =========================================
+GRID
+========================================= */
+
+.grid-2{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:16px;
+}
+
+.grid-3{
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+gap:16px;
+}
+
+
+/* =========================================
+FORM
+========================================= */
+
+.input-group{
+margin-bottom:18px;
+}
+
+label{
+display:block;
+margin-bottom:8px;
+font-size:13px;
+font-weight:700;
+color:#cce7ff;
+}
+
+input,
+select,
+textarea{
+width:100%;
+border:none;
+outline:none;
+padding:16px;
+border-radius:18px;
+background:
+rgba(255,255,255,.1);
+color:white;
+font-size:14px;
+font-family:'Poppins',sans-serif;
+border:1px solid rgba(255,255,255,.08);
+transition:.25s;
+}
+
+textarea{
+resize:vertical;
+min-height:90px;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+border-color:#00c3ff;
+background:
+rgba(255,255,255,.14);
+box-shadow:
+0 0 0 4px rgba(0,195,255,.12);
+}
+
+input::placeholder,
+textarea::placeholder{
+color:rgba(255,255,255,.5);
+}
+
+select option{
+color:black;
+}
+
+.readonly{
+background:
+rgba(0,195,255,.08)!important;
+border:1px solid rgba(0,195,255,.25)!important;
+}
+
+
+/* =========================================
+SEARCH
+========================================= */
+
+.search-box{
+display:flex;
+gap:12px;
+margin-bottom:18px;
+}
+
+.search-box input{
+flex:1;
+}
+
+
+/* =========================================
+BUTTON
+========================================= */
+
+.btn{
+border:none;
+outline:none;
+cursor:pointer;
+font-family:'Poppins',sans-serif;
+font-weight:800;
+transition:.25s;
+}
+
+.btn-search{
+padding:0 24px;
+border-radius:18px;
+background:
+linear-gradient(
+135deg,
+#00c3ff,
+#0066ff
+);
+color:white;
+font-size:14px;
+box-shadow:
+0 10px 20px rgba(0,140,255,.3);
+}
+
+.btn-search:hover{
+transform:translateY(-2px);
+}
+
+.btn-submit{
+width:100%;
+padding:18px;
+border-radius:22px;
+background:
+linear-gradient(
+135deg,
+#00e676,
+#00c853
+);
+color:white;
+font-size:16px;
+font-weight:900;
+margin-top:14px;
+box-shadow:
+0 10px 25px rgba(0,200,83,.35);
+}
+
+.btn-submit:hover{
+transform:translateY(-2px);
+}
+
+.btn-reset{
+width:100%;
+padding:18px;
+border-radius:22px;
+background:
+linear-gradient(
+135deg,
+#ff4d6d,
+#ff1744
+);
+color:white;
+font-size:16px;
+font-weight:900;
+margin-top:14px;
+box-shadow:
+0 10px 25px rgba(255,23,68,.3);
+}
+
+
+/* =========================================
+RESULT
+========================================= */
+
+.result-box{
+margin-top:20px;
+padding:20px;
+border-radius:24px;
+background:
+rgba(0,195,255,.08);
+border:1px solid rgba(0,195,255,.15);
+display:none;
+}
+
+.result-title{
+font-size:18px;
+font-weight:800;
+margin-bottom:14px;
+color:#7dd3fc;
+}
+
+.interpretasi{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:14px;
+margin-top:18px;
+}
+
+.interpretasi div{
+padding:16px;
+border-radius:18px;
+background:
+rgba(255,255,255,.06);
+font-size:13px;
+line-height:1.7;
+}
+
+.loading{
+display:none;
+margin-top:12px;
+font-size:13px;
+color:#7dd3fc;
+font-weight:600;
+}
+
+.footer{
+text-align:center;
+margin-top:26px;
+font-size:12px;
+opacity:.7;
+line-height:1.8;
+}
+
+
+/* =========================================
+TABLET
+========================================= */
+
+@media(max-width:992px){
+
+.hero{
+padding-left:175px;
+}
+
+.hero h1{
+font-size:34px;
+}
+
+}
+
+
+/* =========================================
+MOBILE
+========================================= */
+
+@media(max-width:768px){
+
+body{
+padding:14px;
+}
+
+.hero{
+padding:24px;
+padding-top:120px;
+min-height:auto;
+border-radius:28px;
+}
+
+.logo-group{
+top:22px;
+left:10px;
+}
+
+.logo{
+width:74px;
+height:74px;
+border-radius:16px;
+}
+
+.hero h1{
+font-size:26px;
+line-height:1.25;
+}
+
+.hero p{
+font-size:13px;
+line-height:1.7;
+}
+
+.badge{
+font-size:12px;
+padding:10px 16px;
+margin-top:18px;
+}
+
+.grid-2,
+.grid-3{
+grid-template-columns:1fr;
+}
+
+.search-box{
+flex-direction:column;
+}
+
+.btn-search{
+height:56px;
+}
+
+.interpretasi{
+grid-template-columns:1fr;
+}
+
+.card{
+padding:20px;
+border-radius:26px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="hero">
+
+<div class="logo-group">
+
+<img
+src="https://i.ibb.co.com/JFgkSb1L/1000801085.png"
+class="logo">
+
+<img
+src="https://i.ibb.co.com/QGY9J9x/1000800434.png"
+class="logo">
+
+</div>
+
+<div class="hero-content">
+
+<h1>RUN FOR YOUR LIFE 2026</h1>
+
+<p>
+FORM PEMERIKSAAN KESEHATAN PESERTA<br>
+PENGAMBILAN RPC / RACE PACK COLLECTION
+</p>
+
+<div class="badge">
+<i class="fa-solid fa-heart-pulse"></i>
+SISTEM PEMERIKSAAN TERINTEGRASI
+</div>
+
+</div>
+
+</div>
+
+<form id="formKesehatan">
+
+<div class="card">
+
+<div class="section-title">
+<i class="fa-solid fa-magnifying-glass"></i>
+<span>Cari Data Peserta</span>
+</div>
+
+<div class="search-box">
+
+<input
+type="text"
+id="keyword"
+placeholder="Masukkan Register ID atau Nomor BIB">
+
+<button
+type="button"
+class="btn btn-search"
+onclick="cariPeserta()">
+
+<i class="fa-solid fa-search"></i>
+CEK DATA
+
+</button>
+
+</div>
+
+<div
+class="loading"
+id="loadingCari">
+
+<i class="fa-solid fa-spinner fa-spin"></i>
+Mencari data peserta...
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="section-title">
+<i class="fa-solid fa-user"></i>
+<span>Identitas Peserta</span>
+</div>
+
+<div class="grid-2">
+
+<div class="input-group">
+<label>Register ID</label>
+
+<input
+type="text"
+id="registerId"
+readonly
+class="readonly">
+</div>
+
+<div class="input-group">
+<label>Nomor BIB</label>
+
+<input
+type="text"
+id="bib"
+readonly
+class="readonly">
+</div>
+
+<div class="input-group">
+<label>Nama Lengkap</label>
+
+<input
+type="text"
+id="nama"
+readonly
+class="readonly">
+</div>
+
+<div class="input-group">
+<label>NIK</label>
+
+<input
+type="text"
+id="nik"
+readonly
+class="readonly">
+</div>
+
+<div class="input-group">
+<label>Jenis Kelamin</label>
+
+<input
+type="text"
+id="jk"
+readonly
+class="readonly">
+</div>
+
+<div class="input-group">
+<label>No WhatsApp</label>
+
+<input
+type="text"
+id="wa"
+readonly
+class="readonly">
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="section-title">
+<i class="fa-solid fa-location-dot"></i>
+<span>Alamat Peserta</span>
+</div>
+
+<div class="grid-2">
+
+<div class="input-group">
+<label>Kecamatan</label>
+
+<select
+id="kecamatan"
+required
+onchange="updateKelurahan()">
+
+<option value="">Pilih Kecamatan</option>
+
+<option value="Kecamatan Kranggan">
+Kecamatan Kranggan
+</option>
+
+<option value="Kecamatan Prajurit Kulon">
+Kecamatan Prajurit Kulon
+</option>
+
+<option value="Kecamatan Magersari">
+Kecamatan Magersari
+</option>
+
+<option value="Luar Kota">
+Luar Kota
+</option>
+
+</select>
+</div>
+
+<div class="input-group">
+<label>Kelurahan</label>
+
+<select
+id="kelurahan"
+required>
+
+<option value="">
+Pilih Kelurahan
+</option>
+
+</select>
+
+</div>
+
+</div>
+
+<div class="input-group">
+
+<label>Alamat Lengkap</label>
+
+<textarea
+id="alamat"
+placeholder="Masukkan alamat lengkap peserta"
+required></textarea>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="section-title">
+<i class="fa-solid fa-hospital"></i>
+<span>Pemeriksaan Kesehatan</span>
+</div>
+
+<div class="grid-2">
+
+<div class="input-group">
+<label>Puskesmas Pemeriksaan</label>
+
+<select
+id="puskesmas"
+required>
+
+<option value="">
+Pilih Puskesmas
+</option>
+
+<option>
+Puskesmas Mentikan
+</option>
+
+<option>
+Puskesmas Gedongan
+</option>
+
+<option>
+Puskesmas Wates
+</option>
+
+<option>
+Puskesmas Blooto
+</option>
+
+<option>
+Puskesmas Kedundung
+</option>
+
+<option>
+Puskesmas Kranggan
+</option>
+
+</select>
+</div>
+
+<div class="input-group">
+<label>Tanggal Pemeriksaan</label>
+
+<input
+type="date"
+id="tanggal"
+required>
+</div>
+
+</div>
+
+<div class="grid-3">
+
+<div class="input-group">
+<label>Tinggi Badan (cm)</label>
+
+<input
+type="number"
+id="tb"
+placeholder="170">
+</div>
+
+<div class="input-group">
+<label>Berat Badan (kg)</label>
+
+<input
+type="number"
+id="bb"
+placeholder="65">
+</div>
+
+<div class="input-group">
+<label>Lingkar Perut</label>
+
+<input
+type="number"
+id="lp"
+placeholder="80">
+</div>
+
+<div class="input-group">
+<label>Sistolik</label>
+
+<input
+type="number"
+id="sistol"
+placeholder="120">
+</div>
+
+<div class="input-group">
+<label>Diastolik</label>
+
+<input
+type="number"
+id="diastol"
+placeholder="80">
+</div>
+
+<div class="input-group">
+<label>Gula Darah</label>
+
+<input
+type="number"
+id="gda"
+placeholder="100">
+</div>
+
+<div class="input-group">
+<label>Kolesterol</label>
+
+<input
+type="number"
+id="kolesterol"
+placeholder="180">
+</div>
+
+<div class="input-group">
+<label>Asam Urat</label>
+
+<input
+type="number"
+id="asamUrat"
+placeholder="5">
+</div>
+
+<div class="input-group">
+<label>ECG</label>
+
+<select id="ecg">
+
+<option value="">Pilih</option>
+<option value="Normal">Normal</option>
+<option value="Abnormal">Abnormal</option>
+
+</select>
+</div>
+
+</div>
+
+<div class="interpretasi">
+
+<div>
+<b>Status IMT</b><br>
+<input
+type="text"
+id="statusImt"
+readonly
+class="readonly">
+</div>
+
+<div>
+<b>Status Tensi</b><br>
+<input
+type="text"
+id="statusTensi"
+readonly
+class="readonly">
+</div>
+
+<div>
+<b>Status Gula Darah</b><br>
+<input
+type="text"
+id="statusGda"
+readonly
+class="readonly">
+</div>
+
+<div>
+<b>Status Kolesterol</b><br>
+<input
+type="text"
+id="statusKolesterol"
+readonly
+class="readonly">
+</div>
+
+<div>
+<b>Status Asam Urat</b><br>
+<input
+type="text"
+id="statusAsamUrat"
+readonly
+class="readonly">
+</div>
+
+<div>
+<b>Kesimpulan</b><br>
+<input
+type="text"
+id="kesimpulan"
+readonly
+class="readonly">
+</div>
+
+</div>
+
+<div class="input-group" style="margin-top:20px;">
+
+<label>Saran Kesehatan</label>
+
+<textarea
+id="saran"
+placeholder="Saran kesehatan otomatis muncul..."
+readonly
+class="readonly"></textarea>
+
+</div>
+
+<button
+type="submit"
+class="btn btn-submit">
+
+<i class="fa-solid fa-paper-plane"></i>
+SIMPAN & KIRIM WHATSAPP
+
+</button>
+
+<button
+type="button"
+class="btn btn-reset"
+onclick="resetForm()">
+
+<i class="fa-solid fa-rotate"></i>
+RESET FORM
+
+</button>
+
+</div>
+
+</form>
+
+<div class="footer">
+
+RUN FOR YOUR LIFE 2026<br>
+Integrated Health Screening System
+
+</div>
+
+</div>
+
+
+<script>
+
+// ======================================================
+// WEB APP URL
+// ======================================================
+
+const WEBAPP_URL =
+"https://script.google.com/macros/s/AKfycbxkbu1a-jpFkwudDR3QFAH_sXZcsmDRmZ2r0TlaOT3X1L9sq5RwUyR72Pxg9kFfcMytmA/exec";
+
+// ======================================================
+// STATE
+// ======================================================
+
+let pesertaDitemukan = false;
+let isSubmitting = false;
+
+// ======================================================
+// AUTO TANGGAL
+// ======================================================
+
+document.getElementById("tanggal").value =
+new Date().toISOString().split("T")[0];
+
+// ======================================================
+// DATA KELURAHAN
+// ======================================================
+
+const kelurahanData = {
+
+"Kecamatan Kranggan":[
+"Jagalan",
+"Kranggan",
+"Meri",
+"Miji",
+"Purwotengah",
+"Sentanan"
+],
+
+"Kecamatan Prajurit Kulon":[
+"Blooto",
+"Kauman",
+"Mentikan",
+"Prajurit Kulon",
+"Pulorejo",
+"Surodinawan"
+],
+
+"Kecamatan Magersari":[
+"Balongsari",
+"Gedongan",
+"Gunung Gedangan",
+"Kedundung",
+"Magersari",
+"Wates"
+],
+
+"Luar Kota":[
+"Luar Kota"
+]
+
+};
+
+// ======================================================
+// UPDATE KELURAHAN
+// ======================================================
+
+function updateKelurahan(){
+
+const kecamatan =
+document.getElementById("kecamatan").value;
+
+const kelurahan =
+document.getElementById("kelurahan");
+
+kelurahan.innerHTML =
+'<option value="">Pilih Kelurahan</option>';
+
+if(kelurahanData[kecamatan]){
+
+kelurahanData[kecamatan]
+.forEach(item=>{
+
+kelurahan.innerHTML += `
+<option value="${item}">
+${item}
+</option>
+`;
+
+});
+
+}
+
+}
+
+// ======================================================
+// CARI PESERTA
+// ======================================================
+
+async function cariPeserta(){
+
+const keyword =
+document.getElementById("keyword")
+.value
+.trim();
+
+if(!keyword){
+
+Swal.fire(
+"Gagal",
+"Masukkan Register ID atau Nomor BIB",
+"warning"
+);
+
+return;
+
+}
+
+pesertaDitemukan = false;
+
+document.getElementById("loadingCari")
+.style.display = "block";
+
+try{
+
+const res = await fetch(
+`${WEBAPP_URL}?action=getPeserta&keyword=${encodeURIComponent(keyword)}`
+);
+
+const data = await res.json();
+
+document.getElementById("loadingCari")
+.style.display = "none";
+
+if(data.status === "success"){
+
+pesertaDitemukan = true;
+
+// ======================
+// SET DATA
+// ======================
+
+document.getElementById("registerId").value =
+data.registerId || "";
+
+document.getElementById("bib").value =
+data.bib || "";
+
+document.getElementById("nama").value =
+data.nama || "";
+
+document.getElementById("nik").value =
+data.nik || "";
+
+document.getElementById("jk").value =
+data.jk || "";
+
+document.getElementById("wa").value =
+data.wa || "";
+
+// ======================
+// ALERT
+// ======================
+
+Swal.fire({
+icon:"success",
+title:"Peserta Ditemukan",
+html:`
+<div style="text-align:left;line-height:1.8">
+<b>${data.nama}</b><br>
+BIB : ${data.bib}<br>
+Register ID : ${data.registerId}
+</div>
+`
+});
+
+}else{
+
+resetPeserta();
+
+Swal.fire(
+"Data Tidak Ditemukan",
+"Peserta tidak ada di MASTER_DATA",
+"error"
+);
+
+}
+
+}catch(err){
+
+document.getElementById("loadingCari")
+.style.display = "none";
+
+resetPeserta();
+
+Swal.fire(
+"Error",
+"Gagal menghubungi server",
+"error"
+);
+
+console.log(err);
+
+}
+
+}
+
+// ======================================================
+// RESET DATA PESERTA
+// ======================================================
+
+function resetPeserta(){
+
+pesertaDitemukan = false;
+
+[
+"registerId",
+"bib",
+"nama",
+"nik",
+"jk",
+"wa"
+].forEach(id=>{
+
+document.getElementById(id).value = "";
+
+});
+
+}
+
+// ======================================================
+// INTERPRETASI
+// ======================================================
+
+function updateInterpretasi(){
+
+const tb =
+parseFloat(document.getElementById("tb").value) || 0;
+
+const bb =
+parseFloat(document.getElementById("bb").value) || 0;
+
+const sistol =
+parseInt(document.getElementById("sistol").value) || 0;
+
+const diastol =
+parseInt(document.getElementById("diastol").value) || 0;
+
+const gda =
+parseInt(document.getElementById("gda").value) || 0;
+
+const kolesterol =
+parseInt(document.getElementById("kolesterol").value) || 0;
+
+const asamUrat =
+parseFloat(document.getElementById("asamUrat").value) || 0;
+
+const jk =
+document.getElementById("jk").value;
+
+let statusList = [];
+
+// ======================================================
+// IMT
+// ======================================================
+
+if(tb > 0 && bb > 0){
+
+const imt =
+bb / ((tb/100)*(tb/100));
+
+let statusImt = "";
+
+if(imt < 18.5){
+
+statusImt = "Kurus";
+
+}else if(imt < 25){
+
+statusImt = "Normal";
+
+}else if(imt < 30){
+
+statusImt = "Gemuk";
+
+}else{
+
+statusImt = "Obesitas";
+
+}
+
+document.getElementById("statusImt").value =
+statusImt;
+
+statusList.push(statusImt);
+
+}
+
+// ======================================================
+// TENSI
+// ======================================================
+
+if(sistol > 0 && diastol > 0){
+
+let tensi = "";
+
+if(sistol >= 140 || diastol >= 90){
+
+tensi = "Hipertensi";
+
+}else if(sistol >= 120){
+
+tensi = "Pre Hipertensi";
+
+}else{
+
+tensi = "Normal";
+
+}
+
+document.getElementById("statusTensi").value =
+tensi;
+
+statusList.push(tensi);
+
+}
+
+// ======================================================
+// GULA DARAH
+// ======================================================
+
+if(gda > 0){
+
+const status =
+gda < 140
+? "Normal"
+: gda < 200
+? "Pre Diabetes"
+: "Diabetes";
+
+document.getElementById("statusGda").value =
+status;
+
+statusList.push(status);
+
+}
+
+// ======================================================
+// KOLESTEROL
+// ======================================================
+
+if(kolesterol > 0){
+
+const status =
+kolesterol < 200
+? "Normal"
+: kolesterol < 240
+? "Batas Tinggi"
+: "Hiperkolesterol";
+
+document.getElementById("statusKolesterol").value =
+status;
+
+statusList.push(status);
+
+}
+
+// ======================================================
+// ASAM URAT
+// ======================================================
+
+if(asamUrat > 0){
+
+let status = "";
+
+if(jk === "Laki-laki"){
+
+status =
+asamUrat <= 7
+? "Normal"
+: "Hiperurisemia";
+
+}else{
+
+status =
+asamUrat <= 6
+? "Normal"
+: "Hiperurisemia";
+
+}
+
+document.getElementById("statusAsamUrat").value =
+status;
+
+statusList.push(status);
+
+}
+
+// ======================================================
+// KESIMPULAN
+// ======================================================
+
+let kesimpulan = "SEHAT";
+
+if(
+statusList.includes("Hipertensi") ||
+statusList.includes("Diabetes") ||
+statusList.includes("Hiperkolesterol") ||
+statusList.includes("Hiperurisemia") ||
+statusList.includes("Obesitas")
+){
+
+kesimpulan = "PERLU KONSULTASI";
+
+}
+
+document.getElementById("kesimpulan").value =
+kesimpulan;
+
+// ======================================================
+// SARAN
+// ======================================================
+
+generateSaran(statusList);
+
+}
+
+// ======================================================
+// SARAN
+// ======================================================
+
+function generateSaran(list){
+
+let saran = [];
+
+if(list.includes("Hipertensi")){
+
+saran.push(
+"Kurangi konsumsi garam dan rutin olahraga."
+);
+
+}
+
+if(list.includes("Diabetes")){
+
+saran.push(
+"Batasi makanan/minuman manis."
+);
+
+}
+
+if(list.includes("Hiperkolesterol")){
+
+saran.push(
+"Hindari gorengan dan perbanyak serat."
+);
+
+}
+
+if(list.includes("Hiperurisemia")){
+
+saran.push(
+"Kurangi jeroan dan seafood."
+);
+
+}
+
+if(list.includes("Obesitas")){
+
+saran.push(
+"Turunkan berat badan dengan pola hidup sehat."
+);
+
+}
+
+if(saran.length === 0){
+
+saran.push(
+"Pertahankan pola hidup sehat dan rutin olahraga."
+);
+
+}
+
+document.getElementById("saran").value =
+saran.join("\n");
+
+}
+
+// ======================================================
+// AUTO UPDATE INTERPRETASI
+// ======================================================
+
+document.querySelectorAll(
+'#tb,#bb,#sistol,#diastol,#gda,#kolesterol,#asamUrat'
+)
+.forEach(el => {
+
+el.addEventListener(
+'input',
+updateInterpretasi
+);
+
+});
+
+// ======================================================
+// SUBMIT FORM
+// ======================================================
+
+document
+.getElementById("formKesehatan")
+.addEventListener("submit", async function(e){
+
+e.preventDefault();
+
+if(isSubmitting) return;
+
+// ======================================================
+// VALIDASI PESERTA
+// ======================================================
+
+if(!pesertaDitemukan){
+
+Swal.fire(
+"Gagal",
+"Cari peserta terlebih dahulu",
+"warning"
+);
+
+return;
+
+}
+
+const registerId =
+document.getElementById("registerId").value;
+
+if(!registerId){
+
+Swal.fire(
+"Gagal",
+"Register ID kosong",
+"warning"
+);
+
+return;
+
+}
+
+isSubmitting = true;
+
+document.querySelector(".btn-submit")
+.disabled = true;
+
+// ======================================================
+// DATA
+// ======================================================
+
+const data = {
+
+action:"savePemeriksaan",
+
+registerId:
+document.getElementById("registerId").value,
+
+bib:
+document.getElementById("bib").value,
+
+nama:
+document.getElementById("nama").value,
+
+nik:
+document.getElementById("nik").value,
+
+jk:
+document.getElementById("jk").value,
+
+wa:
+document.getElementById("wa").value,
+
+kecamatan:
+document.getElementById("kecamatan").value,
+
+kelurahan:
+document.getElementById("kelurahan").value,
+
+alamat:
+document.getElementById("alamat").value,
+
+puskesmas:
+document.getElementById("puskesmas").value,
+
+tanggal:
+document.getElementById("tanggal").value,
+
+tb:
+document.getElementById("tb").value,
+
+bb:
+document.getElementById("bb").value,
+
+lp:
+document.getElementById("lp").value,
+
+sistol:
+document.getElementById("sistol").value,
+
+diastol:
+document.getElementById("diastol").value,
+
+gda:
+document.getElementById("gda").value,
+
+kolesterol:
+document.getElementById("kolesterol").value,
+
+asamUrat:
+document.getElementById("asamUrat").value,
+
+ecg:
+document.getElementById("ecg").value,
+
+statusImt:
+document.getElementById("statusImt").value,
+
+statusTensi:
+document.getElementById("statusTensi").value,
+
+statusGda:
+document.getElementById("statusGda").value,
+
+statusKolesterol:
+document.getElementById("statusKolesterol").value,
+
+statusAsamUrat:
+document.getElementById("statusAsamUrat").value,
+
+kesimpulan:
+document.getElementById("kesimpulan").value,
+
+saran:
+document.getElementById("saran").value
+
+};
+
+// ======================================================
+// LOADING
+// ======================================================
+
+Swal.fire({
+title:"Menyimpan Data...",
+html:"Mohon tunggu sebentar",
+allowOutsideClick:false,
+didOpen:()=>{
+Swal.showLoading();
+}
+});
+
+try{
+
+const res = await fetch(WEBAPP_URL,{
+method:"POST",
+body:JSON.stringify(data)
+});
+
+const result = await res.json();
+
+if(result.status === "success"){
+
+Swal.fire({
+icon:"success",
+title:"Berhasil",
+html:`
+<div style="line-height:1.8">
+Pemeriksaan kesehatan berhasil disimpan
+</div>
+`
+});
+
+if(result.whatsappUrl){
+
+window.open(
+result.whatsappUrl,
+"_blank"
+);
+
+}
+
+}else{
+
+Swal.fire(
+"Gagal",
+result.message || "Gagal menyimpan data",
+"error"
+);
+
+}
+
+}catch(err){
+
+Swal.fire(
+"Error",
+"Gagal mengirim data",
+"error"
+);
+
+console.log(err);
+
+}
+
+isSubmitting = false;
+
+document.querySelector(".btn-submit")
+.disabled = false;
+
+});
+
+// ======================================================
+// RESET
+// ======================================================
+
+function resetForm(){
+
+location.reload();
+
+}
+
+</script>
+
+</body>
+</html>
